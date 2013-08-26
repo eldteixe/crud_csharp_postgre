@@ -43,6 +43,19 @@ namespace WinCRUD
             {
                 frm.ShowDialog();
             }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void telefonesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (frmTelefones frm = new frmTelefones())
+            {
+                frm.ShowDialog();
+            }
         }               
     }
 }

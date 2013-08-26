@@ -29,10 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.grvDados = new System.Windows.Forms.DataGridView();
+            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
             this.cbxEstados = new System.Windows.Forms.ComboBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
@@ -54,16 +64,6 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvDados)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -86,8 +86,8 @@
             this.grvDados.AllowUserToDeleteRows = false;
             this.grvDados.AllowUserToResizeColumns = false;
             this.grvDados.AllowUserToResizeRows = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.AliceBlue;
-            this.grvDados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
+            this.grvDados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grvDados.BackgroundColor = System.Drawing.Color.White;
             this.grvDados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grvDados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -112,6 +112,72 @@
             this.grvDados.TabIndex = 0;
             this.grvDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvDados_CellContentClick);
             // 
+            // Código
+            // 
+            this.Código.DataPropertyName = "id";
+            this.Código.HeaderText = "Código:";
+            this.Código.Name = "Código";
+            this.Código.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "nome";
+            this.Nome.HeaderText = "Nome:";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 420;
+            // 
+            // Login
+            // 
+            this.Login.DataPropertyName = "endereco";
+            this.Login.HeaderText = "Endereço:";
+            this.Login.Name = "Login";
+            this.Login.ReadOnly = true;
+            this.Login.Width = 200;
+            // 
+            // Numero
+            // 
+            this.Numero.DataPropertyName = "numero";
+            this.Numero.HeaderText = "Número:";
+            this.Numero.Name = "Numero";
+            this.Numero.ReadOnly = true;
+            // 
+            // CEP
+            // 
+            this.CEP.DataPropertyName = "cep";
+            this.CEP.HeaderText = "CEP:";
+            this.CEP.Name = "CEP";
+            this.CEP.ReadOnly = true;
+            // 
+            // Senha
+            // 
+            this.Senha.DataPropertyName = "bairro";
+            this.Senha.HeaderText = "Bairro:";
+            this.Senha.Name = "Senha";
+            this.Senha.ReadOnly = true;
+            // 
+            // Cidade
+            // 
+            this.Cidade.DataPropertyName = "cidade";
+            this.Cidade.HeaderText = "Cidade:";
+            this.Cidade.Name = "Cidade";
+            this.Cidade.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "estado";
+            this.Estado.HeaderText = "Estado:";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "status";
+            this.Status.HeaderText = "Status:";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Visible = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtCEP);
@@ -134,6 +200,14 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Manutenção: ";
+            // 
+            // txtCEP
+            // 
+            this.txtCEP.Location = new System.Drawing.Point(77, 126);
+            this.txtCEP.Mask = "00000-999";
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(298, 20);
+            this.txtCEP.TabIndex = 11;
             // 
             // cbxEstados
             // 
@@ -375,80 +449,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // Código
-            // 
-            this.Código.DataPropertyName = "id";
-            this.Código.HeaderText = "Código:";
-            this.Código.Name = "Código";
-            this.Código.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "nome";
-            this.Nome.HeaderText = "Nome:";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 420;
-            // 
-            // Login
-            // 
-            this.Login.DataPropertyName = "endereco";
-            this.Login.HeaderText = "Endereço:";
-            this.Login.Name = "Login";
-            this.Login.ReadOnly = true;
-            this.Login.Width = 200;
-            // 
-            // Numero
-            // 
-            this.Numero.DataPropertyName = "numero";
-            this.Numero.HeaderText = "Número:";
-            this.Numero.Name = "Numero";
-            this.Numero.ReadOnly = true;
-            // 
-            // CEP
-            // 
-            this.CEP.DataPropertyName = "cep";
-            this.CEP.HeaderText = "CEP:";
-            this.CEP.Name = "CEP";
-            this.CEP.ReadOnly = true;
-            // 
-            // Senha
-            // 
-            this.Senha.DataPropertyName = "bairro";
-            this.Senha.HeaderText = "Bairro:";
-            this.Senha.Name = "Senha";
-            this.Senha.ReadOnly = true;
-            // 
-            // Cidade
-            // 
-            this.Cidade.DataPropertyName = "cidade";
-            this.Cidade.HeaderText = "Cidade:";
-            this.Cidade.Name = "Cidade";
-            this.Cidade.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "estado";
-            this.Estado.HeaderText = "Estado:";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "status";
-            this.Status.HeaderText = "Status:";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Visible = false;
-            // 
-            // txtCEP
-            // 
-            this.txtCEP.Location = new System.Drawing.Point(77, 126);
-            this.txtCEP.Mask = "00000-999";
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(298, 20);
-            this.txtCEP.TabIndex = 11;
             // 
             // frmCadContatos
             // 

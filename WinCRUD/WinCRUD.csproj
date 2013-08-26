@@ -32,6 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Repository\bin\Debug\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\Repository\bin\Debug\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -62,6 +69,12 @@
     <Compile Include="frmCadUsuarios.Designer.cs">
       <DependentUpon>frmCadUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTelefones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelefones.Designer.cs">
+      <DependentUpon>frmTelefones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -72,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadUsuarios.resx">
       <DependentUpon>frmCadUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelefones.resx">
+      <DependentUpon>frmTelefones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,6 +153,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Gnome-Process-Stop-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadastrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

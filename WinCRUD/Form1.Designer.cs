@@ -35,10 +35,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.telefonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,6 +83,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(720, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // cadastrosToolStripMenuItem
             // 
@@ -93,6 +94,33 @@
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
+            // 
+            // contatosToolStripMenuItem
+            // 
+            this.contatosToolStripMenuItem.Image = global::WinCRUD.Properties.Resources.User_Info_32;
+            this.contatosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.contatosToolStripMenuItem.Name = "contatosToolStripMenuItem";
+            this.contatosToolStripMenuItem.Size = new System.Drawing.Size(141, 38);
+            this.contatosToolStripMenuItem.Text = "Contatos";
+            this.contatosToolStripMenuItem.Click += new System.EventHandler(this.contatosToolStripMenuItem_Click);
+            // 
+            // telefonesToolStripMenuItem
+            // 
+            this.telefonesToolStripMenuItem.Image = global::WinCRUD.Properties.Resources.Gnome_Applications_Games_32;
+            this.telefonesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.telefonesToolStripMenuItem.Name = "telefonesToolStripMenuItem";
+            this.telefonesToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.telefonesToolStripMenuItem.Text = "Telefones";
+            this.telefonesToolStripMenuItem.Click += new System.EventHandler(this.telefonesToolStripMenuItem_Click);
+            // 
+            // usuáriosToolStripMenuItem
+            // 
+            this.usuáriosToolStripMenuItem.Image = global::WinCRUD.Properties.Resources.Gnome_System_Lock_Screen_32;
+            this.usuáriosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(141, 38);
+            this.usuáriosToolStripMenuItem.Text = "Usuários";
+            this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -105,32 +133,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // contatosToolStripMenuItem
-            // 
-            this.contatosToolStripMenuItem.Image = global::WinCRUD.Properties.Resources.User_Info_32;
-            this.contatosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.contatosToolStripMenuItem.Name = "contatosToolStripMenuItem";
-            this.contatosToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
-            this.contatosToolStripMenuItem.Text = "Contatos";
-            this.contatosToolStripMenuItem.Click += new System.EventHandler(this.contatosToolStripMenuItem_Click);
-            // 
-            // telefonesToolStripMenuItem
-            // 
-            this.telefonesToolStripMenuItem.Image = global::WinCRUD.Properties.Resources.Gnome_Applications_Games_32;
-            this.telefonesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.telefonesToolStripMenuItem.Name = "telefonesToolStripMenuItem";
-            this.telefonesToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
-            this.telefonesToolStripMenuItem.Text = "Telefones";
-            // 
-            // usuáriosToolStripMenuItem
-            // 
-            this.usuáriosToolStripMenuItem.Image = global::WinCRUD.Properties.Resources.Gnome_System_Lock_Screen_32;
-            this.usuáriosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
-            this.usuáriosToolStripMenuItem.Text = "Usuários";
-            this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // frmMain
             // 
