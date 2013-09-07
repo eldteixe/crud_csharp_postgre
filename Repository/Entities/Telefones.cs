@@ -9,13 +9,10 @@ namespace Repository.Entities
     public class Telefones
     {
         public virtual int id { get; set; }
-
         public virtual int id_contatos { get; set; }
-
-        public virtual int telefone { get; set; }
-
+        public virtual string telefone { get; set; }
+        public virtual string tipo { get; set; }
         public virtual string email { get; set; }
-
         public virtual string site { get; set; }
     }
 }

@@ -16,6 +16,7 @@ namespace Repository.Mapping
             Map(c => c.id_contatos);
             Map(c => c.site);
             Map(c => c.telefone);
+            Map(c => c.tipo);
             Map(c => c.email);
             Table("telefones");
         }
