@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinCRUD.Helper;
 
 namespace WinCRUD
 {
@@ -35,6 +36,20 @@ namespace WinCRUD
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            errorProvider1.SetError(txtTelefone, "");
+            if (txtTelefone.Text.Replace("_", "").Replace("(", "").Replace(")", "").Replace("-", "").Trim().Length < 10)            
+            {
+                errorProvider1.SetError(txtTelefone, "Telefone inválido.");
+                return;
+            }
+            if (!string.IsNullOrEmpty(txtEmail.Text) && !Funcoes.validarEmail(txtEmail,errorProvider1))
+            {
+                return;
+            }
+            if (!string.IsNullOrEmpty(txtSite.Text) && !Funcoes.validarURL(txtSite, errorProvider1))
+            {
+                return;
+            }
             try
             {
                 TelefonesRepository repositorioTelefone = new TelefonesRepository();
@@ -67,6 +82,6 @@ namespace WinCRUD
             cbxContatos.SelectedIndex = 0;
             cbxTipo.SelectedIndex     = 0;
             cbxContatos.Focus();
-        }
+        }       
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,12 +53,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.cbxContatosPesquisa = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -143,7 +146,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 107);
+            this.label9.Location = new System.Drawing.Point(9, 107);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(38, 13);
             this.label9.TabIndex = 12;
@@ -152,7 +155,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 54);
+            this.label8.Location = new System.Drawing.Point(9, 54);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 11;
@@ -166,7 +169,7 @@
             "Residencial",
             "Comercial",
             "Particular"});
-            this.cbxTipo.Location = new System.Drawing.Point(83, 51);
+            this.cbxTipo.Location = new System.Drawing.Point(70, 51);
             this.cbxTipo.Name = "cbxTipo";
             this.cbxTipo.Size = new System.Drawing.Size(289, 21);
             this.cbxTipo.TabIndex = 1;
@@ -174,7 +177,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 81);
+            this.label7.Location = new System.Drawing.Point(9, 81);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 9;
@@ -182,7 +185,7 @@
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(83, 78);
+            this.txtTelefone.Location = new System.Drawing.Point(70, 78);
             this.txtTelefone.Mask = "(99) 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(289, 20);
@@ -190,14 +193,14 @@
             // 
             // txtSite
             // 
-            this.txtSite.Location = new System.Drawing.Point(83, 130);
+            this.txtSite.Location = new System.Drawing.Point(70, 130);
             this.txtSite.Name = "txtSite";
             this.txtSite.Size = new System.Drawing.Size(289, 20);
             this.txtSite.TabIndex = 4;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(83, 104);
+            this.txtEmail.Location = new System.Drawing.Point(70, 104);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(289, 20);
             this.txtEmail.TabIndex = 3;
@@ -205,7 +208,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 133);
+            this.label6.Location = new System.Drawing.Point(9, 133);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(28, 13);
             this.label6.TabIndex = 4;
@@ -216,7 +219,7 @@
             this.btnSalvar.FlatAppearance.BorderSize = 2;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(287, 156);
+            this.btnSalvar.Location = new System.Drawing.Point(274, 156);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(85, 39);
             this.btnSalvar.TabIndex = 5;
@@ -227,7 +230,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 27);
+            this.label5.Location = new System.Drawing.Point(9, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 13);
             this.label5.TabIndex = 2;
@@ -238,7 +241,7 @@
             this.cbxContatos.DisplayMember = "nome";
             this.cbxContatos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxContatos.FormattingEnabled = true;
-            this.cbxContatos.Location = new System.Drawing.Point(83, 24);
+            this.cbxContatos.Location = new System.Drawing.Point(70, 24);
             this.cbxContatos.Name = "cbxContatos";
             this.cbxContatos.Size = new System.Drawing.Size(289, 21);
             this.cbxContatos.TabIndex = 0;
@@ -307,6 +310,11 @@
             this.cbxContatosPesquisa.TabIndex = 3;
             this.cbxContatosPesquisa.ValueMember = "id";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmTelefones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,6 +346,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,5 +378,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbxContatosPesquisa;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
