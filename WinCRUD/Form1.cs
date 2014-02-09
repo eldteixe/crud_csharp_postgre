@@ -56,6 +56,16 @@ namespace WinCRUD
             {
                 frm.ShowDialog();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TelefonesRepository dao = new TelefonesRepository();
+            var consulta = dao.Consultar(c => c.id > 0);
+            foreach (var item in consulta)
+            {
+                MessageBox.Show(item.telefone);
+            }
         }               
     }
 }

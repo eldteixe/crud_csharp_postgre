@@ -39,6 +39,7 @@
             this.telefonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -109,7 +110,7 @@
             this.telefonesToolStripMenuItem.Image = global::WinCRUD.Properties.Resources.Gnome_Applications_Games_32;
             this.telefonesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.telefonesToolStripMenuItem.Name = "telefonesToolStripMenuItem";
-            this.telefonesToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.telefonesToolStripMenuItem.Size = new System.Drawing.Size(141, 38);
             this.telefonesToolStripMenuItem.Text = "Telefones";
             this.telefonesToolStripMenuItem.Click += new System.EventHandler(this.telefonesToolStripMenuItem_Click);
             // 
@@ -134,12 +135,23 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(318, 54);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 61);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuText;
             this.ClientSize = new System.Drawing.Size(720, 386);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -173,6 +185,7 @@
         private System.Windows.Forms.ToolStripMenuItem telefonesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
 
     }
 }

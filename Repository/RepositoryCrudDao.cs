@@ -1,8 +1,10 @@
 ﻿using NHibernate;
+using NHibernate.Criterion;
 using NHibernate.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -92,6 +94,14 @@ namespace Repository
             using (ISession session = FluentySessionFactory.AbrirSession())
             {
                 return (from e in session.Query<T>() select e).ToList();               
+            }
+        }
+
+        public IList<T> Consultar(Expression<Func<T, bool>> where )
+        {
+            using (ISession session = FluentySessionFactory.AbrirSession())
+            {
+                return session.Query<T>().Where<T>(where).ToList();
             }
         }
     }

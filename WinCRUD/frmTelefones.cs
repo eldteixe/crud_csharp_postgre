@@ -1,13 +1,6 @@
 ﻿using Repository;
 using Repository.Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinCRUD.Helper;
 
@@ -15,6 +8,8 @@ namespace WinCRUD
 {
     public partial class frmTelefones : Form
     {
+        private static TelefonesRepository repositorioTelefones = new TelefonesRepository();
+
         public frmTelefones()
         {
             InitializeComponent();
@@ -82,6 +77,39 @@ namespace WinCRUD
             cbxContatos.SelectedIndex = 0;
             cbxTipo.SelectedIndex     = 0;
             cbxContatos.Focus();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {            
+            dgvContatos.DataSource = 
+                repositorioTelefones.RetornarPorContato(Convert.ToInt32(cbxContatosPesquisa.SelectedValue));            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dgvContatos.RowCount > 0)
+            {
+                if (MessageBox.Show("Deseja realmente excluir?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    == System.Windows.Forms.DialogResult.Yes)
+                {                    
+                    int codigo = Convert.ToInt32(dgvContatos.CurrentRow.Cells[0].Value.ToString());
+                    Telefones telefoneModel = repositorioTelefones.RetornarPorId(codigo);
+                    try
+                    {
+                        repositorioTelefones.Excluir(telefoneModel);
+                        MessageBox.Show("Registro excluído com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        button1_Click(sender,e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao excluir: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Não há registro(s) para excluir!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }       
     }
 }
